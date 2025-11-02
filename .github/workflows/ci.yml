@@ -21,8 +21,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Unit Tests
-        run: |
-          PYTHONPATH=src pytest
+        run: pytest
 
       - name: Static Security Analysis (Bandit)
         run: bandit -r src
